@@ -43,7 +43,7 @@ json = {
 local runCount = 0
 function trace (event, line)
     runCount = runCount + 1
-    if runCount > 5000 then
+    if runCount > 100000 then
         error("运行代码量超过阈值")
     end
 end
@@ -91,6 +91,7 @@ bit.isclear = function(v,p) return not bit.isset(v,p) end
 --安全的函数
 local safeFunctions = {
     assert = true,
+    setmetatable = true,
     error = true,
     ipairs = true,
     next = true,
