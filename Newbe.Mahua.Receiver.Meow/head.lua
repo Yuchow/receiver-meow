@@ -2,6 +2,7 @@ JSONLIB = require("JSON")
 utils = require("utils")
 struct = require("struct")
 BIT = require("bit")
+nvm = require("nvm")
 
 --加强随机数随机性
 math.randomseed(tostring(os.time()):reverse():sub(1, 6))
@@ -119,6 +120,7 @@ local safeFunctions = {
     lockbox = true,
     crypto = true,
     bit = true,
+    nvm = true,
 }
 
 --安全的os函数
